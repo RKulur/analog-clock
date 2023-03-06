@@ -1,0 +1,114 @@
+*,*:active,*:hover{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --hour:0deg;
+    --min:0deg;
+    --second:0deg;
+}
+
+html{
+    background-color: #F8F8FE;
+    background: radial-gradient(farthest-corner at 300px -50px,white 25%,rgba(0, 0, 0, 0.527));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main{
+    height:990px;
+    width: 990px;
+    position: relative;
+    filter: drop-shadow(6px 6px 2.5px black) drop-shadow(12px 12px 10px rgba(0, 0, 0, 0.633)) drop-shadow(24px 48px 20px rgba(0, 0, 0, 0.266));
+    scale: .68;
+}
+
+.body{
+    height: 100%;
+    width: 100%;
+}
+
+.pivot,.hour,.min,.second,.patch,.patch2,span,.patch3{
+    position: absolute;
+    left: 48%;
+    transform-origin: center 82%;
+    filter: drop-shadow(-3px -3px 2.5px rgba(0, 0, 0, 0.223)) drop-shadow(-6px -6px 10px rgba(0, 0, 0, 0.333)) drop-shadow(-12px -24px 20px rgba(0, 0, 0, 0.166));
+}
+
+.pivot{
+    top: 48%;
+}
+
+.hour{
+    top:28.5%;
+    left: 46.5%;
+    transform: rotate(var(--hour));
+}
+
+.min{
+    top:18%;
+    left: 48%;
+    transform: rotate(var(--min));
+}
+
+.second{
+    top:16%;
+    left: 48.6%;
+    transform: rotate(var(--second));
+}
+
+.patch{
+    height:260px;
+    width: 400px;
+    top: 38%;
+    left: 30%;
+    background-color: #F8F8FE;
+    z-index: -1; 
+}
+.patch2{
+    height:88%;
+    width: 90%;
+    top: 60px;
+    left: 50px;
+    border-radius:50%;
+    background:radial-gradient(rgba(0, 0, 0, 0.03) 63%,black);
+}
+
+span{
+    font-size: 30px;
+}
+
+.quarts,.ramrahim{
+    top: 70%;
+    left: 45%;
+    filter: none;
+    opacity: .7;
+}
+
+.ramrahim{
+    top: 28%;
+    left: 43%;
+}
+
+.patch3{
+height:37px;
+width: 37px;
+bottom: 47.6%;
+right: -12%;
+border-radius:25px ;
+background: radial-gradient(transparent 30%,black);
+}
+
+
